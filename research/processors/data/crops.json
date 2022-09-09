@@ -1,0 +1,615 @@
+{
+    "271": {
+        "itemID": 271,
+        "name": "Unmilled Rice",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/f/fe/Unmilled_Rice.png",
+        "description": "Rice in its rawest form. Run this through a mill to increase the value.",
+        "growthTime": 8,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Scythe",
+        "polyculture": false
+    },
+    "300": {
+        "itemID": 300,
+        "name": "Amaranth",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/f/f6/Amaranth.png",
+        "description": "A purple grain cultivated by an ancient civilization.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Scythe",
+        "polyculture": false
+    },
+    "398": {
+        "itemID": 398,
+        "name": "Grape",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/c/c2/Grape.png",
+        "description": "A sweet cluster of fruit.",
+        "growthTime": 10,
+        "regrowthTime": 3,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "304": {
+        "itemID": 304,
+        "name": "Hops",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/5/59/Hops.png",
+        "description": "A bitter, tangy flower used to flavor beer.",
+        "growthTime": 11,
+        "regrowthTime": 1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "417": {
+        "itemID": 417,
+        "name": "Sweet Gem Berry",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/8/88/Sweet_Gem_Berry.png",
+        "description": "It's by far the sweetest thing you've ever smelled.",
+        "growthTime": 24,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "595": {
+        "itemID": 595,
+        "name": "Fairy Rose",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/5/5c/Fairy_Rose.png",
+        "description": "An old folk legend suggests that the sweet smell of this flower attracts fairies.",
+        "growthTime": 12,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": true
+    },
+    "591": {
+        "itemID": 591,
+        "name": "Tulip",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/c/cf/Tulip.png",
+        "description": "The most popular spring flower. Has a very faint sweet smell.",
+        "growthTime": 6,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": true
+    },
+    "597": {
+        "itemID": 597,
+        "name": "Blue Jazz",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/2/2f/Blue_Jazz.png",
+        "description": "The flower grows in a sphere to invite as many butterflies as possible.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": true
+    },
+    "421": {
+        "itemID": 421,
+        "name": "Sunflower",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/8/81/Sunflower.png",
+        "description": "A common misconception is that the flower turns so it's always facing the sun.",
+        "growthTime": 8,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer",
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "433": {
+        "itemID": 433,
+        "name": "Coffee Bean",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/3/33/Coffee_Bean.png",
+        "description": "Plant in spring or summer to grow a coffee plant. Place five beans in a keg to make coffee.",
+        "growthTime": 10,
+        "regrowthTime": 2,
+        "seasons": [
+            "Spring",
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "376": {
+        "itemID": 376,
+        "name": "Poppy",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/3/37/Poppy.png",
+        "description": "In addition to its colorful flower, the Poppy has culinary and medicinal uses.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "593": {
+        "itemID": 593,
+        "name": "Summer Spangle",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/9/9f/Summer_Spangle.png",
+        "description": "A tropical bloom that thrives in the humid summer air. Has a sweet, tangy aroma.",
+        "growthTime": 8,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": true
+    },
+    "24": {
+        "itemID": 24,
+        "name": "Parsnip",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/d/db/Parsnip.png",
+        "description": "A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.",
+        "growthTime": 4,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "188": {
+        "itemID": 188,
+        "name": "Green Bean",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/5/5c/Green_Bean.png",
+        "description": "A juicy little bean with a cool, crisp snap.",
+        "growthTime": 10,
+        "regrowthTime": 3,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "190": {
+        "itemID": 190,
+        "name": "Cauliflower",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/a/aa/Cauliflower.png",
+        "description": "Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients.",
+        "growthTime": 12,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "192": {
+        "itemID": 192,
+        "name": "Potato",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/c/c2/Potato.png",
+        "description": "A widely cultivated tuber.",
+        "growthTime": 6,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "248": {
+        "itemID": 248,
+        "name": "Garlic",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/c/cc/Garlic.png",
+        "description": "Adds a wonderful zestiness to dishes. High quality garlic can be pretty spicy.",
+        "growthTime": 4,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "250": {
+        "itemID": 250,
+        "name": "Kale",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/d/d1/Kale.png",
+        "description": "The waxy leaves are great in soups and stir frys.",
+        "growthTime": 6,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Scythe",
+        "polyculture": false
+    },
+    "252": {
+        "itemID": 252,
+        "name": "Rhubarb",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/6/6e/Rhubarb.png",
+        "description": "The stalks are extremely tart, but make a great dessert when sweetened.",
+        "growthTime": 13,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "254": {
+        "itemID": 254,
+        "name": "Melon",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/1/19/Melon.png",
+        "description": "A cool, sweet summer treat.",
+        "growthTime": 12,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "256": {
+        "itemID": 256,
+        "name": "Tomato",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/9/9d/Tomato.png",
+        "description": "Rich and slightly tangy, the Tomato has a wide variety of culinary uses.",
+        "growthTime": 11,
+        "regrowthTime": 4,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "258": {
+        "itemID": 258,
+        "name": "Blueberry",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/9/9e/Blueberry.png",
+        "description": "A popular berry reported to have many health benefits. The blue skin has the highest nutrient concentration.",
+        "growthTime": 13,
+        "regrowthTime": 4,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "260": {
+        "itemID": 260,
+        "name": "Hot Pepper",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/f/f1/Hot_Pepper.png",
+        "description": "Fiery hot with a hint of sweetness.",
+        "growthTime": 5,
+        "regrowthTime": 3,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "262": {
+        "itemID": 262,
+        "name": "Wheat",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/e/e2/Wheat.png",
+        "description": "One of the most widely cultivated grains. Makes a great flour for breads and cakes.",
+        "growthTime": 4,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer",
+            "Fall"
+        ],
+        "harvestMethod": "Scythe",
+        "polyculture": false
+    },
+    "264": {
+        "itemID": 264,
+        "name": "Radish",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/d/d5/Radish.png",
+        "description": "A crisp and refreshing root vegetable with hints of pepper when eaten raw.",
+        "growthTime": 6,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "266": {
+        "itemID": 266,
+        "name": "Red Cabbage",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/2/2d/Red_Cabbage.png",
+        "description": "Often used in salads and coleslaws. The color can range from purple to blue to green-yellow depending on soil conditions.",
+        "growthTime": 9,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "268": {
+        "itemID": 268,
+        "name": "Starfruit",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/d/db/Starfruit.png",
+        "description": "An extremely juicy fruit that grows in hot, humid weather. Slightly sweet with a sour undertone.",
+        "growthTime": 13,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "270": {
+        "itemID": 270,
+        "name": "Corn",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/f/f8/Corn.png",
+        "description": "One of the most popular grains. The sweet, fresh cobs are a summer favorite.",
+        "growthTime": 14,
+        "regrowthTime": 4,
+        "seasons": [
+            "Summer",
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "272": {
+        "itemID": 272,
+        "name": "Eggplant",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/8/8f/Eggplant.png",
+        "description": "A rich and wholesome relative of the tomato. Delicious fried or stewed.",
+        "growthTime": 5,
+        "regrowthTime": 5,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "274": {
+        "itemID": 274,
+        "name": "Artichoke",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/d/dd/Artichoke.png",
+        "description": "The bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",
+        "growthTime": 8,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "276": {
+        "itemID": 276,
+        "name": "Pumpkin",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/6/64/Pumpkin.png",
+        "description": "A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",
+        "growthTime": 13,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "278": {
+        "itemID": 278,
+        "name": "Bok Choy",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/4/40/Bok_Choy.png",
+        "description": "The leafy greens and fibrous stalks are healthy and delicious.",
+        "growthTime": 4,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "280": {
+        "itemID": 280,
+        "name": "Yam",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/5/52/Yam.png",
+        "description": "A starchy tuber with a lot of culinary versatility.",
+        "growthTime": 10,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "282": {
+        "itemID": 282,
+        "name": "Cranberries",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/6/6e/Cranberries.png",
+        "description": "These tart red berries are a traditional winter food.",
+        "growthTime": 7,
+        "regrowthTime": 5,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "284": {
+        "itemID": 284,
+        "name": "Beet",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/a/a4/Beet.png",
+        "description": "A sweet and earthy root vegatable. As a bonus, the leaves make a great salad.",
+        "growthTime": 6,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "16": {
+        "itemID": 16,
+        "name": "Wild Horseradish",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/9/90/Wild_Horseradish.png",
+        "description": "A spicy root found in the spring.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "396": {
+        "itemID": 396,
+        "name": "Spice Berry",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/c/c6/Spice_Berry.png",
+        "description": "It fills the air with a pungent aroma.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "404": {
+        "itemID": 404,
+        "name": "Common Mushroom",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/2/2e/Common_Mushroom.png",
+        "description": "Slightly nutty, with good texture.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "412": {
+        "itemID": 412,
+        "name": "Winter Root",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/1/11/Winter_Root.png",
+        "description": "A starchy tuber.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Winter"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "454": {
+        "itemID": 454,
+        "name": "Ancient Fruit",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/0/01/Ancient_Fruit.png",
+        "description": "It's been dormant for eons.",
+        "growthTime": 28,
+        "regrowthTime": 7,
+        "seasons": [
+            "Spring",
+            "Summer",
+            "Fall"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": true
+    },
+    "400": {
+        "itemID": 400,
+        "name": "Strawberry",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/6/6d/Strawberry.png",
+        "description": "A sweet, juicy favorite with an appealing red color.",
+        "growthTime": 8,
+        "regrowthTime": 4,
+        "seasons": [
+            "Spring"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "90": {
+        "itemID": 90,
+        "name": "Cactus Fruit",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/3/32/Cactus_Fruit.png",
+        "description": "The sweet fruit of the prickly pear cactus.",
+        "growthTime": 12,
+        "regrowthTime": 3,
+        "seasons": [
+            "Spring",
+            "Summer",
+            "Fall",
+            "Winter"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "830": {
+        "itemID": 830,
+        "name": "Taro Root",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/0/01/Taro_Root.png",
+        "description": "This starchy root is one of the most ancient crops.",
+        "growthTime": 10,
+        "regrowthTime": -1,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "832": {
+        "itemID": 832,
+        "name": "Pineapple",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/f/fb/Pineapple.png",
+        "description": "A sweet and tangy tropical treat.",
+        "growthTime": 14,
+        "regrowthTime": 7,
+        "seasons": [
+            "Summer"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    },
+    "771": {
+        "itemID": 771,
+        "name": "Fiber",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/4/45/Fiber.png",
+        "description": "Raw material sourced from plants.",
+        "growthTime": 7,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring",
+            "Summer",
+            "Fall",
+            "Winter"
+        ],
+        "harvestMethod": "Scythe",
+        "polyculture": false
+    },
+    "889": {
+        "itemID": 889,
+        "name": "Qi Fruit",
+        "iconURL": "https://stardewcommunitywiki.com/mediawiki/images/b/b9/Qi_Fruit.png",
+        "description": "Mr. Qi has challenged you to ship 500 of these strange melons.",
+        "growthTime": 4,
+        "regrowthTime": -1,
+        "seasons": [
+            "Spring",
+            "Summer",
+            "Fall",
+            "Winter"
+        ],
+        "harvestMethod": "Hand",
+        "polyculture": false
+    }
+}
