@@ -12,7 +12,7 @@ def uppercase(s: str) -> str:
     return s[0].upper() + s[1:]
 
 
-polyCrops = set(["Ancient Fruit", "Blue Jazz", "Fairy Rose", "Summer Spangle", "Tulip"])
+monoCrops = set(["Ancient Fruit", "Blue Jazz", "Fairy Rose", "Summer Spangle", "Tulip"])
 
 crops = {}
 for k, v in crop_data.items():
@@ -37,7 +37,7 @@ for k, v in crop_data.items():
         "regrowthTime": regrowthTime,
         "seasons": seasons,
         "harvestMethod": harvestMethod,
-        "polyculture": objects[yieldID]["name"] in polyCrops,
+        "monoCrop": objects[yieldID]["name"] in monoCrops,
     }
 
 with open("./data/crops.json", "w") as file:
