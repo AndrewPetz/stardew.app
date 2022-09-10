@@ -6,6 +6,7 @@ type itemID = string;
 
 interface ReturnType {
   allItems: Record<string, number>;
+  polyCrops?: Record<string, number>;
   uniqueShipments: number;
   monoculture: boolean;
   polyculture: boolean;
@@ -20,7 +21,9 @@ export function parseShipping(json: any): ReturnType {
   */
 
   let monoculture = false;
-  let polyculture = false;
+  let polyCnt = 0;
+  let polyCrops: Record<itemID, number> = {};
+
   const allItems: Record<itemID, number> = {};
   for (const key in shipping_items) {
     allItems[key] = 0;
@@ -28,7 +31,12 @@ export function parseShipping(json: any): ReturnType {
 
   // check to see if ANY items have been shipped
   if (json.SaveGame.player.basicShipped === "")
-    return { allItems, uniqueShipments: 0, monoculture, polyculture };
+    return {
+      allItems,
+      uniqueShipments: 0,
+      monoculture,
+      polyculture: polyCnt === 28,
+    };
 
   let uniqueShipments = 0;
   // check to see if there are multiple types of items shipped
@@ -46,11 +54,14 @@ export function parseShipping(json: any): ReturnType {
 
       // check for crops
       if (crops.hasOwnProperty(item_id)) {
-        // TODO: EDIT CROPS.JSON TO HAVE MONOCULTURE FLAG INSTEAD OF POLYCULTURE
-        // TODO: check if monoculture is false, if so, check the count and make
-        //       sure it is over 15 for each crop that is !monoculture.
-        // TODO: for each crop, we want to check if at least one has a count
-        //       of 300 or more. If so, set monoculture to true.
+        if (!crops[item_id as keyof typeof crops].monoCrop) {
+          // this counts towards polyculture so check if it's >= 15
+          console.log("POLY CROP", item_id);
+          if (item.value.int >= 15) polyCnt++;
+          else polyCrops[item_id] = item.value.int;
+        }
+        // only need one crop to be over 300 to get monoculture
+        if (item.value.int >= 300) monoculture = true;
       }
     }
   } else {
@@ -59,11 +70,30 @@ export function parseShipping(json: any): ReturnType {
     let item = json.SaveGame.player.basicShipped.item;
     let item_id = item.key.int.toString() as itemID;
 
-    if (!allItems.hasOwnProperty(item_id))
-      return { allItems, uniqueShipments, monoculture, polyculture };
-    allItems[item_id] = item.value.int;
-    if (item.value.int > 0) uniqueShipments++;
-  }
+    // some things you can ship but aren't items or don't count towards the achievement
+    // like the items you ship on Mr. Qi's quest
+    if (allItems.hasOwnProperty(item_id)) {
+      allItems[item_id] = item.value.int;
+      if (item.value.int > 0) uniqueShipments++;
 
-  return { allItems, uniqueShipments, monoculture, polyculture };
+      // check for crops
+      if (crops.hasOwnProperty(item_id)) {
+        if (!crops[item_id as keyof typeof crops].monoCrop) {
+          // this counts towards polyculture so check if it's >= 15
+          if (item.value.int >= 15) polyCnt++;
+        }
+        // only need one crop to be over 300 to get monoculture
+        if (item.value.int >= 300) monoculture = true;
+      }
+    }
+  }
+  console.log(polyCnt);
+
+  return {
+    allItems,
+    uniqueShipments,
+    monoculture,
+    polyculture: polyCnt === 28,
+    polyCrops,
+  };
 }
