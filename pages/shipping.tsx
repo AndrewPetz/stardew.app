@@ -1,40 +1,39 @@
 import type { NextPage } from "next";
-import type { Fish } from "../types";
 
 import objects from "../research/processors/data/objects.json";
 import shipping from "../research/processors/data/shipment.json";
-import sprites from "../research/processors/data/sprites.json";
+import crops from "../research/processors/data/crops.json";
 import achievements from "../research/processors/data/achievements.json";
 
 import AchievementCard from "../components/cards/achievementcard";
 import InfoCard from "../components/cards/infocard";
 import SidebarLayout from "../components/sidebarlayout";
+import BooleanCard from "../components/cards/booleancard";
+import CropSlideOver from "../components/slideovers/cropslideover";
+import ObjectSlideOver from "../components/slideovers/objectslideover";
 
 import { useState } from "react";
+import { useKV } from "../hooks/useKV";
 import Head from "next/head";
 
-import { FilterIcon } from "@heroicons/react/outline";
-import FishSlideOver from "../components/slideovers/fishslideover";
-import { useKV } from "../hooks/useKV";
 import { InformationCircleIcon } from "@heroicons/react/solid";
-
-// a mapping of achievements and their requirements
-const requirements: Record<string, number> = {
-  Fisherman: 10,
-  "Ol' Mariner": 24,
-  "Master Angler": 67,
-};
 
 const Shipping: NextPage = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
-  //   const [showFish, setShowFish] = useState<boolean>(false);
   const [hasUploaded] = useKV<boolean>("general", "uploadedFile", false);
+
   const [name] = useKV("general", "name", "Farmer");
-  const [totalShipped] = useKV("shipping", "numItems", 0);
-  //   const [uniqueCaught] = useKV("fish", "uniqueCaught", 0);
-  //   const [selectedFish, setSelectedFish] = useState<Fish>(
-  //     Object.values(fishes)[0]
-  //   );
+  const [shipped, setShipped] = useKV("shipping", "uniqueShipments", 0);
+
+  const [showCrop, setShowCrop] = useState(false);
+  const [selectedCrop, setSelectedCrop] = useState<any>(
+    Object.values(crops)[0]
+  );
+
+  const [showItem, setShowItem] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<any>(
+    Object.values(objects)[0]
+  );
 
   return (
     <>
@@ -74,7 +73,7 @@ const Shipping: NextPage = () => {
             </h2>
             {hasUploaded && (
               <InfoCard
-                title={`${name} has shipped ${totalShipped} items.`}
+                title={`${name} has shipped ${shipped} unique items.`}
                 Icon={InformationCircleIcon}
               />
             )}
@@ -90,11 +89,6 @@ const Shipping: NextPage = () => {
                     title={achievement.name}
                     description={achievement.description}
                     sourceURL={achievement.iconURL}
-                    // initialChecked={
-                    //   achievement.name === "Mother Catch"
-                    //     ? totalCaught >= 100
-                    //     : uniqueCaught >= requirements[achievement.name]
-                    // }
                   />
                 ))}
             </div>
@@ -117,22 +111,39 @@ const Shipping: NextPage = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4 py-4 sm:grid-cols-2 xl:grid-cols-4">
-            {Object.entries(shipping).map(([id, name]) => (
-              <AchievementCard
+            {Object.keys(shipping).map((id) => (
+              <BooleanCard
                 key={id}
-                title={name}
-                description={
-                  Object.entries(objects).find(([oId, obj]) => oId === id)?.[1]
-                    .description!
+                category="shipping"
+                setCount={setShipped}
+                setSelected={
+                  crops.hasOwnProperty(id) ? setSelectedCrop : setSelectedItem
                 }
-                sourceURL={sprites[id as keyof typeof sprites]!}
-                tag={"shipping"}
-                id={id}
+                setShow={crops.hasOwnProperty(id) ? setShowCrop : setShowItem}
+                itemObject={
+                  crops.hasOwnProperty(id)
+                    ? crops[id as keyof typeof crops]
+                    : objects[id as keyof typeof objects]
+                }
               />
             ))}
           </div>
         </div>
       </SidebarLayout>
+
+      <CropSlideOver
+        isOpen={showCrop}
+        selected={selectedCrop}
+        setCount={setShipped}
+        setOpen={setShowCrop}
+      />
+
+      <ObjectSlideOver
+        isOpen={showItem}
+        selected={selectedItem}
+        setCount={setShipped}
+        setOpen={setShowItem}
+      />
     </>
   );
 };
