@@ -11,6 +11,9 @@ import { parseQuests } from "./parsers/quests";
 import { parseSkills } from "./parsers/skills";
 import { parseSocial } from "./parsers/social";
 import { parseStardrops } from "./parsers/stardrops";
+import { parseShipping } from "./parsers/shipping";
+
+import achievements from "../research/processors/data/achievements.json";
 
 const semVerGte = require("semver/functions/gte");
 
@@ -79,6 +82,16 @@ export async function parseSaveFile(file: any) {
   // Monsters
   const { deepestMineLevel, deepestSkullCavernLevel, monstersKilled } =
     parseMonsters(jsonObj);
+
+  // Shipping
+  const { allItems, uniqueShipments, monoculture, polyculture, fullShipment } =
+    parseShipping(jsonObj);
+
+  // Achievements
+  const achivementsEarned: Record<string, boolean> = {};
+  achivementsEarned[achievements["Monoculture"].id] = monoculture;
+  achivementsEarned[achievements["Polyculture"].id] = polyculture;
+  achivementsEarned[achievements["Full Shipment"].id] = fullShipment;
 
   console.log("Parsed information!");
 
@@ -153,6 +166,13 @@ export async function parseSaveFile(file: any) {
         fiveHeartCount,
         tenHeartCount,
         ...relationships,
+      },
+      shipping: {
+        uniqueShipments,
+        ...allItems,
+      },
+      achievements: {
+        ...achivementsEarned,
       },
     }),
   });

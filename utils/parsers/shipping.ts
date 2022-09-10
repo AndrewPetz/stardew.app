@@ -9,6 +9,7 @@ interface ReturnType {
   uniqueShipments: number;
   monoculture: boolean;
   polyculture: boolean;
+  fullShipment: boolean;
 }
 
 export function parseShipping(json: any): ReturnType {
@@ -20,6 +21,7 @@ export function parseShipping(json: any): ReturnType {
   */
 
   let monoculture = false;
+  let fullShipment = false;
   let polyCnt = 0;
 
   const allItems: Record<itemID, number> = {};
@@ -34,6 +36,7 @@ export function parseShipping(json: any): ReturnType {
       uniqueShipments: 0,
       monoculture,
       polyculture: polyCnt === 28,
+      fullShipment,
     };
 
   let uniqueShipments = 0;
@@ -85,12 +88,16 @@ export function parseShipping(json: any): ReturnType {
       }
     }
   }
-  console.log(polyCnt);
+
+  // check for full shipment
+  if (uniqueShipments === Object.keys(shipping_items).length)
+    fullShipment = true;
 
   return {
     allItems,
     uniqueShipments,
     monoculture,
     polyculture: polyCnt === 28,
+    fullShipment,
   };
 }

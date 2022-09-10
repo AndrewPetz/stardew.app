@@ -11,9 +11,11 @@ import SidebarLayout from "../components/sidebarlayout";
 import BooleanCard from "../components/cards/booleancard";
 import CropSlideOver from "../components/slideovers/cropslideover";
 import ObjectSlideOver from "../components/slideovers/objectslideover";
+import FilterBtn from "../components/filterbtn";
 
 import { useState } from "react";
 import { useKV } from "../hooks/useKV";
+import { useCategory } from "../utils/useCategory";
 import Head from "next/head";
 
 import { InformationCircleIcon } from "@heroicons/react/solid";
@@ -34,6 +36,9 @@ const Shipping: NextPage = () => {
   const [selectedItem, setSelectedItem] = useState<any>(
     Object.values(objects)[0]
   );
+
+  const { data, error, isLoading } = useCategory("shipping", "number");
+  const [_filter, setFilter] = useState<string>("off");
 
   return (
     <>
@@ -96,37 +101,71 @@ const Shipping: NextPage = () => {
           <h2 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">
             All Items to Ship
           </h2>
-          <div className="flex items-center space-x-4">
-            <div className="mt-2">
-              <div className="flex items-center space-x-2 rounded-2xl border border-gray-300 bg-[#f0f0f0] p-2 dark:border-[#2A2A2A] dark:bg-[#191919]">
-                <div className="h-4 w-4 rounded-full border border-green-900 bg-green-500/20" />
-                <p className="text-sm dark:text-white">Shipped Item</p>
-              </div>
-            </div>
-            <div className="mt-2">
-              <div className="flex items-center space-x-2 rounded-2xl border border-gray-300 bg-[#f0f0f0] p-2 dark:border-[#2A2A2A] dark:bg-[#191919]">
-                <div className="h-4 w-4 rounded-full border border-gray-300 bg-white dark:border-[#2a2a2a] dark:bg-[#1f1f1f]" />
-                <p className="text-sm dark:text-white">Unshipped Item</p>
-              </div>
-            </div>
+
+          {/* Filter Buttons */}
+          <div className="mt-2 flex items-center space-x-4">
+            <FilterBtn
+              _filter={_filter}
+              setFilter={setFilter}
+              targetState="true"
+              title="Shipped Item"
+            />
+            <FilterBtn
+              _filter={_filter}
+              setFilter={setFilter}
+              targetState="false"
+              title="Unshipped Item"
+            />
           </div>
+          {/* End Filter Buttons */}
+
           <div className="grid grid-cols-1 gap-4 py-4 sm:grid-cols-2 xl:grid-cols-4">
-            {Object.keys(shipping).map((id) => (
-              <BooleanCard
-                key={id}
-                category="shipping"
-                setCount={setShipped}
-                setSelected={
-                  crops.hasOwnProperty(id) ? setSelectedCrop : setSelectedItem
-                }
-                setShow={crops.hasOwnProperty(id) ? setShowCrop : setShowItem}
-                itemObject={
-                  crops.hasOwnProperty(id)
-                    ? crops[id as keyof typeof crops]
-                    : objects[id as keyof typeof objects]
-                }
-              />
-            ))}
+            {isLoading || error || !hasUploaded
+              ? Object.keys(shipping).map((id) => (
+                  <BooleanCard
+                    key={id}
+                    category="shipping"
+                    setCount={setShipped}
+                    setSelected={
+                      crops.hasOwnProperty(id)
+                        ? setSelectedCrop
+                        : setSelectedItem
+                    }
+                    setShow={
+                      crops.hasOwnProperty(id) ? setShowCrop : setShowItem
+                    }
+                    itemObject={
+                      crops.hasOwnProperty(id)
+                        ? crops[id as keyof typeof crops]
+                        : objects[id as keyof typeof objects]
+                    }
+                  />
+                ))
+              : Object.keys(data)
+                  .filter((key) => {
+                    if (_filter === "off") return true;
+                    else return data[key] === JSON.parse(_filter);
+                  })
+                  .map((id) => (
+                    <BooleanCard
+                      key={id}
+                      category="shipping"
+                      setCount={setShipped}
+                      setSelected={
+                        crops.hasOwnProperty(id)
+                          ? setSelectedCrop
+                          : setSelectedItem
+                      }
+                      setShow={
+                        crops.hasOwnProperty(id) ? setShowCrop : setShowItem
+                      }
+                      itemObject={
+                        crops.hasOwnProperty(id)
+                          ? crops[id as keyof typeof crops]
+                          : objects[id as keyof typeof objects]
+                      }
+                    />
+                  ))}
           </div>
         </div>
       </SidebarLayout>
