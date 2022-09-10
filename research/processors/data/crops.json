@@ -10,7 +10,8 @@
             "Spring"
         ],
         "harvestMethod": "Scythe",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "300": {
         "itemID": 300,
@@ -23,7 +24,8 @@
             "Fall"
         ],
         "harvestMethod": "Scythe",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "398": {
         "itemID": 398,
@@ -36,7 +38,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "304": {
         "itemID": 304,
@@ -49,7 +52,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "417": {
         "itemID": 417,
@@ -62,7 +66,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "595": {
         "itemID": 595,
@@ -75,7 +80,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": true
+        "monoCrop": true,
+        "polyCrop": false
     },
     "591": {
         "itemID": 591,
@@ -88,7 +94,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": true
+        "monoCrop": true,
+        "polyCrop": false
     },
     "597": {
         "itemID": 597,
@@ -101,7 +108,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": true
+        "monoCrop": true,
+        "polyCrop": false
     },
     "421": {
         "itemID": 421,
@@ -115,7 +123,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "433": {
         "itemID": 433,
@@ -129,7 +138,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "376": {
         "itemID": 376,
@@ -142,7 +152,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "593": {
         "itemID": 593,
@@ -155,7 +166,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": true
+        "monoCrop": true,
+        "polyCrop": false
     },
     "24": {
         "itemID": 24,
@@ -168,7 +180,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "188": {
         "itemID": 188,
@@ -181,7 +194,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "190": {
         "itemID": 190,
@@ -194,7 +208,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "192": {
         "itemID": 192,
@@ -207,7 +222,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "248": {
         "itemID": 248,
@@ -220,7 +236,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "250": {
         "itemID": 250,
@@ -233,7 +250,8 @@
             "Spring"
         ],
         "harvestMethod": "Scythe",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "252": {
         "itemID": 252,
@@ -246,7 +264,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "254": {
         "itemID": 254,
@@ -259,7 +278,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "256": {
         "itemID": 256,
@@ -272,7 +292,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "258": {
         "itemID": 258,
@@ -285,7 +306,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "260": {
         "itemID": 260,
@@ -298,7 +320,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "262": {
         "itemID": 262,
@@ -312,7 +335,8 @@
             "Fall"
         ],
         "harvestMethod": "Scythe",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "264": {
         "itemID": 264,
@@ -325,7 +349,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "266": {
         "itemID": 266,
@@ -338,7 +363,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "268": {
         "itemID": 268,
@@ -351,7 +377,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "270": {
         "itemID": 270,
@@ -365,7 +392,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "272": {
         "itemID": 272,
@@ -378,7 +406,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "274": {
         "itemID": 274,
@@ -391,7 +420,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "276": {
         "itemID": 276,
@@ -404,7 +434,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "278": {
         "itemID": 278,
@@ -417,7 +448,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "280": {
         "itemID": 280,
@@ -430,7 +462,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "282": {
         "itemID": 282,
@@ -443,7 +476,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "284": {
         "itemID": 284,
@@ -456,7 +490,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "16": {
         "itemID": 16,
@@ -469,7 +504,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "396": {
         "itemID": 396,
@@ -482,7 +518,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "404": {
         "itemID": 404,
@@ -495,7 +532,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "412": {
         "itemID": 412,
@@ -508,7 +546,8 @@
             "Winter"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "454": {
         "itemID": 454,
@@ -523,7 +562,8 @@
             "Fall"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": true
+        "monoCrop": true,
+        "polyCrop": false
     },
     "400": {
         "itemID": 400,
@@ -536,7 +576,8 @@
             "Spring"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": true,
+        "polyCrop": true
     },
     "90": {
         "itemID": 90,
@@ -552,7 +593,8 @@
             "Winter"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "830": {
         "itemID": 830,
@@ -565,7 +607,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "832": {
         "itemID": 832,
@@ -578,7 +621,8 @@
             "Summer"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "771": {
         "itemID": 771,
@@ -594,7 +638,8 @@
             "Winter"
         ],
         "harvestMethod": "Scythe",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     },
     "889": {
         "itemID": 889,
@@ -610,6 +655,7 @@
             "Winter"
         ],
         "harvestMethod": "Hand",
-        "monoCrop": false
+        "monoCrop": false,
+        "polyCrop": false
     }
 }

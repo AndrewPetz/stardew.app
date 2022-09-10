@@ -54,18 +54,18 @@ export function parseShipping(json: any): ReturnType {
 
       // check for crops
       if (crops.hasOwnProperty(item_id)) {
-        if (!crops[item_id as keyof typeof crops].monoCrop) {
+        if (crops[item_id as keyof typeof crops].polyCrop) {
           // this counts towards polyculture so check if it's >= 15
-          console.log("POLY CROP", item_id);
           if (item.value.int >= 15) polyCnt++;
           else polyCrops[item_id] = item.value.int;
         }
         // only need one crop to be over 300 to get monoculture
-        if (item.value.int >= 300) monoculture = true;
+        if (crops[item_id as keyof typeof crops].monoCrop) {
+          if (item.value.int >= 300) monoculture = true;
+        }
       }
     }
   } else {
-    // only one type of item shipped
     // TODO: duplicate the above code with minor modifications
     let item = json.SaveGame.player.basicShipped.item;
     let item_id = item.key.int.toString() as itemID;

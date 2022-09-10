@@ -12,6 +12,39 @@ def uppercase(s: str) -> str:
     return s[0].upper() + s[1:]
 
 
+polyCrops = set(
+    [
+        "Amaranth",
+        "Artichoke",
+        "Beet",
+        "Blueberry",
+        "Bok Choy",
+        "Cauliflower",
+        "Coffee Bean",
+        "Corn",
+        "Cranberries",
+        "Eggplant",
+        "Garlic",
+        "Grape",
+        "Green Bean",
+        "Hops",
+        "Hot Pepper",
+        "Kale",
+        "Melon",
+        "Parsnip",
+        "Potato",
+        "Pumpkin",
+        "Radish",
+        "Red Cabbage",
+        "Rhubarb",
+        "Starfruit",
+        "Strawberry",
+        "Tomato",
+        "Wheat",
+        "Yam",
+    ]
+)
+
 monoCrops = set(["Ancient Fruit", "Blue Jazz", "Fairy Rose", "Summer Spangle", "Tulip"])
 
 crops = {}
@@ -37,7 +70,9 @@ for k, v in crop_data.items():
         "regrowthTime": regrowthTime,
         "seasons": seasons,
         "harvestMethod": harvestMethod,
-        "monoCrop": objects[yieldID]["name"] in monoCrops,
+        "monoCrop": (objects[yieldID]["name"] in monoCrops)
+        or (objects[yieldID]["name"] in polyCrops),
+        "polyCrop": objects[yieldID]["name"] in polyCrops,
     }
 
 with open("./data/crops.json", "w") as file:
