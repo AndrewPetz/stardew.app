@@ -6,7 +6,6 @@ type itemID = string;
 
 interface ReturnType {
   allItems: Record<string, number>;
-  polyCrops?: Record<string, number>;
   uniqueShipments: number;
   monoculture: boolean;
   polyculture: boolean;
@@ -22,7 +21,6 @@ export function parseShipping(json: any): ReturnType {
 
   let monoculture = false;
   let polyCnt = 0;
-  let polyCrops: Record<itemID, number> = {};
 
   const allItems: Record<itemID, number> = {};
   for (const key in shipping_items) {
@@ -57,7 +55,6 @@ export function parseShipping(json: any): ReturnType {
         if (crops[item_id as keyof typeof crops].polyCrop) {
           // this counts towards polyculture so check if it's >= 15
           if (item.value.int >= 15) polyCnt++;
-          else polyCrops[item_id] = item.value.int;
         }
         // only need one crop to be over 300 to get monoculture
         if (crops[item_id as keyof typeof crops].monoCrop) {
@@ -66,7 +63,6 @@ export function parseShipping(json: any): ReturnType {
       }
     }
   } else {
-    // TODO: duplicate the above code with minor modifications
     let item = json.SaveGame.player.basicShipped.item;
     let item_id = item.key.int.toString() as itemID;
 
@@ -78,12 +74,14 @@ export function parseShipping(json: any): ReturnType {
 
       // check for crops
       if (crops.hasOwnProperty(item_id)) {
-        if (!crops[item_id as keyof typeof crops].monoCrop) {
+        if (crops[item_id as keyof typeof crops].polyCrop) {
           // this counts towards polyculture so check if it's >= 15
           if (item.value.int >= 15) polyCnt++;
         }
         // only need one crop to be over 300 to get monoculture
-        if (item.value.int >= 300) monoculture = true;
+        if (crops[item_id as keyof typeof crops].monoCrop) {
+          if (item.value.int >= 300) monoculture = true;
+        }
       }
     }
   }
@@ -94,6 +92,5 @@ export function parseShipping(json: any): ReturnType {
     uniqueShipments,
     monoculture,
     polyculture: polyCnt === 28,
-    polyCrops,
   };
 }
